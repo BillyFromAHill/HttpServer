@@ -36,7 +36,7 @@ void request_handler::handle_request(const request& req, reply& rep)
 
   int pos = request_path.find("?");
 
-  if (pos > 0)
+  if (pos != std::string::npos)
   {
       request_path = request_path.substr(0, pos);
   }
