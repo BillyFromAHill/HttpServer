@@ -34,6 +34,13 @@ void request_handler::handle_request(const request& req, reply& rep)
     return;
   }
 
+  int pos = request_path.find("?");
+
+  if (pos > 0)
+  {
+      request_path = request_path.substr(0, pos);
+  }
+
   // Request path must be absolute and not contain "..".
   if (request_path.empty() || request_path[0] != '/'
       || request_path.find("..") != std::string::npos)
