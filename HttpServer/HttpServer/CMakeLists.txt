@@ -1,0 +1,2 @@
+cmake_minimum_required (VERSION 2.6)
+add_executable(final Server.cpp WorkersPool.cpp HttpServer.cpp connection.cpp connection_manager.cpp mime_types.cpp reply.cpp request_handler.cpp request_parser.cpp)
